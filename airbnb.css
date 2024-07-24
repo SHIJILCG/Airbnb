@@ -23,7 +23,6 @@
     z-index: 100;
     background-color: #fff;
     -webkit-box-direction: normal;
-    -webkit-box-align: vertical;
 }
 
 .header-1-inner {
@@ -161,7 +160,16 @@
     padding-block-end: unset;
     overscroll-behavior-inline: contain;
 }
-
+#scroll-header-1-item-1::after{
+    background-color: #222;
+        left: 28px;
+        position: absolute;
+        content: '';
+        height: 2px;
+        width:30px;
+        bottom: 0px;
+        line-height: 1.125rem;
+    }
 .header-scroll-item {
     text-align: center;
     line-height: 1rem;
@@ -189,6 +197,7 @@
     grid-template-rows: auto auto;
     gap: 4px;
     min-width: 40px;
+    overflow: hidden;
 }
 
 .header-scroll-item-inner span img {
@@ -199,7 +208,6 @@
     display: inline-block;
     vertical-align: middle;
     height: auto;
-    /* max-width: 100%; */
 }
 
 .header-scroll-text {
@@ -722,7 +730,7 @@ footer {
     font-size: 0.875rem;
 }
 
-nav {
+#bottom-nav {
     -webkit-box-align: center;
     display: flex;
     align-items: center;
@@ -868,8 +876,8 @@ nav {
 
 .header-2-part-1-inner {
     display: flex;
-    padding-inline-end: 24px;
-    padding-inline-start: 24px;
+    padding-inline-end: 40px;
+    padding-inline-start: 40px;
     justify-content: space-between;
     align-items: center;
     margin-inline: auto;
@@ -983,6 +991,19 @@ nav {
     flex: 1 1 auto;
     font-family: text-1;
 }
+#small-search-butt-1-text-1 {
+    font-weight: 400;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+    padding: 0 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 80px;
+    flex: 1 1 auto;
+    font-family: text-1;
+    color: #616161;
+}
 
 #small-butt-space-maker {
     text-align: left;
@@ -1013,7 +1034,6 @@ nav {
 
 .profil-spaceother {
     flex: 1 0 auto;
-    margin-top: -2px;
 }
 
 .profil-spaceother nav {
@@ -1531,8 +1551,8 @@ nav {
 }
 
 .header-2-part-3-inner {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 40px;
+    padding-right:40px;
     min-width: 0;
     box-sizing: border-box;
     height: 100%;
@@ -1542,6 +1562,7 @@ nav {
     max-width: 2520px;
     margin-left: auto;
     margin-right: auto;
+    overflow-y: hidden;
 }
 
 .header-2-part-3-inner-content-child {
@@ -1708,9 +1729,26 @@ nav {
     .copyright-item{
         margin-top: -6px;
     }
-    .footer-inner-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    .section-1-main-body,
+    .section-1-main-body-2 {
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 2520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .body-main-header {
+        padding: 0px 40px;
+        max-width: 2520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .scroll-bar-arrrow-right-button{
+        margin-right:10px;
+    }
+    .search-apan-3-inner,.footer-inner{
+        padding-inline: 40px;
     }
 }
 @media (min-width:806px) {
@@ -1739,42 +1777,6 @@ nav {
     #header-2-part-2-id {
         margin-top: -80px;
     }
-    .header-2-part-1-inner {
-        padding-inline-end: 40px;
-        padding-inline-start: 40px;
-    }
-    .header-2-part-2-inner{
-        padding-bottom: 22px;
-    }
-    .header-2-part-3-inner {
-        padding-left: 40px;
-        padding-right: 40px;
-        overflow-y: hidden;
-    }
-    .footer-inner{
-        padding-inline: 40px;
-    }
-    .section-1-main-body,
-    .section-1-main-body-2 {
-        padding-left: 40px;
-        padding-right: 40px;
-        max-width: 2520px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .body-main-header {
-        padding: 0px 40px;
-        max-width: 2520px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .scroll-bar-arrrow-right-button{
-        margin-right:10px;
-    }
-    .search-apan-3-inner{
-        padding-inline: 40px;
-    }
     .section-3-main-body-texts-inner ul{
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -1785,6 +1787,10 @@ nav {
     border-top: 0;
     padding-block: 48px;
 
+}
+.footer-inner-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 }
 @media (max-width:1128px) {
