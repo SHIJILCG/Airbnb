@@ -424,11 +424,13 @@
 .section-3-main-body-headings {
     position: relative;
     box-sizing: border-box;
+    max-height: 50px;
 }
 
 .section-3-main-body-headings-inner {
     padding-right: 12px;
     margin-right: -12px;
+    max-height: 50px;
 }
 
 .section-3-main-body-headings-inner-body {
@@ -436,12 +438,13 @@
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
+    max-height: 50px;
 }
 
 #section-3-main-body-heading {
     margin-left: -10px;
-    margin-bottom: 16px;
-    margin-right: 16px;
+    margin-bottom: 6px;
+    margin-right: 6px;
     line-height: 1.125rem;
     font-size: 0.875rem;
     font-weight: 500;
