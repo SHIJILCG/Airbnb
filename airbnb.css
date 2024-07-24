@@ -566,7 +566,6 @@
 
 footer {
     background: #f7f7f7;
-    margin-bottom: 64px;
 }
 
 .footer-inner {
@@ -731,7 +730,9 @@ nav {
     bottom: 0;
     background-color: white;
     border-top: 1px solid rgb(233, 233, 233);
-
+    transform: translateY(0);
+    padding: 0.7rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-inner {
@@ -1557,6 +1558,7 @@ nav {
     scroll-padding-inline: 32px;
     overscroll-behavior-inline: contain;
     border: none;
+    overflow-y: hidden;
 }
 
 .scroll-bar-arrrow-right-button {
@@ -1680,7 +1682,7 @@ nav {
         margin-left: -10px;
     }
 
-    nav {
+    #bottom-nav {
         display: none;
     }
 
@@ -1744,6 +1746,7 @@ nav {
     .header-2-part-3-inner {
         padding-left: 40px;
         padding-right: 40px;
+        overflow-y: hidden;
     }
     .footer-inner{
         padding-inline: 40px;
@@ -1813,6 +1816,7 @@ nav {
     .header-2-part-3-inner {
         padding-left: 80px;
         padding-right: 80px;
+        overflow-y: hidden;
     }
 
     .section-1-main-body,

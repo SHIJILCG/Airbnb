@@ -1,3 +1,6 @@
+let lastScrollTop = 0;
+const bottomNav = document.getElementById('bottom-nav');
+
 function updateSizeBasedValue() {
     var div2 = document.getElementById("header-2");
 
@@ -25,6 +28,24 @@ function checkScroll() {
     }
 
     updateSizeBasedValue(); 
+
+    if (window.innerWidth > 744) {
+        bottomNav.style.display = 'none'; 
+    } else {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            
+            bottomNav.style.display = 'none';
+        } else {
+           
+            bottomNav.style.display = 'block';
+        }
+        if (scrollTop === 0) {
+           
+            bottomNav.style.display = 'block';
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+    }
 }
 
 function updateImageBasedOnWidth() {
@@ -37,13 +58,22 @@ function updateImageBasedOnWidth() {
     }
 }
 
+function checkInitialNavDisplay() {
+    if (window.innerWidth > 744) {
+        bottomNav.style.display = 'none';
+    } else {
+        bottomNav.style.display = 'block';
+    }
+}
+
 window.addEventListener("scroll", checkScroll);
 window.addEventListener("resize", function() {
     updateSizeBasedValue();
     updateImageBasedOnWidth();
+    checkInitialNavDisplay(); 
 });
 
 updateSizeBasedValue();
 checkScroll();
-updateImageBasedOnWidth(); 
-
+updateImageBasedOnWidth();
+checkInitialNavDisplay(); 
